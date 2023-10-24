@@ -12,7 +12,8 @@ open class BullDog(override var age : Int = 0) : Dog() {
     // final keyword로 상속을 막을 수 있다.
     // final override fun bark() {
     override fun bark() {
-        println("멍멍")
+//        println("멍멍")
+        super.bark()
     }
 }
 
@@ -23,7 +24,24 @@ open class BullDog(override var age : Int = 0) : Dog() {
     }
 }
 
+// 추상 클래스
+abstract class Developer() {
+    abstract var age: Int
+    abstract fun code(language: String)
+}
+
+class BackEndDev(override var age: Int) : Developer() {
+    override fun code(language: String) {
+        println("I code with $language")
+    }
+}
+
 fun main() {
+    var backEndDev =  BackEndDev(age = 20)
+    println(backEndDev.age)
+    backEndDev.code("java")
+
+
     val dog = BullDog(2)
     println(dog.age)
     dog.bark()
