@@ -41,6 +41,6 @@ fun main() {
 
     for (status in PaymentStatus.values()) {
         println("[$status](${status.label})")
-        println("[${status.name}](${status.ordinal})")≠
+        println("[${status.name}](${status.ordinal})")
     }
 }
