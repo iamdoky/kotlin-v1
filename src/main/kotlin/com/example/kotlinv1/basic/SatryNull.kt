@@ -14,6 +14,11 @@ fun main() {
     val length = getLengthIfNotNull(null)
     println(length)
 
+    val a = "Kotlin"
+    val b: String? = null
+    println(b?.length)
+    println(a?.length) // Unnecessary safe call
+
     //throw NullPointerException()
 
 //    val c: String? = null
