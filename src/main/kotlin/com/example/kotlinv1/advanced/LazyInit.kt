@@ -4,11 +4,11 @@ package com.example.kotlinv1.advanced
 //  Lazy Init /  Late Init
 
 class HelloBot {
-     val greeting: String by lazy(LazyThreadSafetyMode.PUBLICATION ) {
-    // val greeting: String by lazy {
-//    val greeting: String by lazy(LazyThreadSafetyMode.NONE) {
-        println("초기화 로직 수행")
-        getHello()
+          val greeting: String by lazy(LazyThreadSafetyMode.PUBLICATION ) {
+          val greeting: String by lazy {
+          val greeting: String by lazy(LazyThreadSafetyMode.NONE) {
+          println("초기화 로직 수행")
+          getHello()
     }
 
     fun sayHello() = println(greeting)
